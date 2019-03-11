@@ -15,6 +15,8 @@ import { CounterComponent } from '@app/components/counter/counter.component';
 import { FetchDataComponent } from '@app/components/fetchdata/fetchdata.component';
 import { CallbackComponent } from "@app/components/Callback/callback.component";
 import { TokenInterceptor } from "@app/services/token.interceptor";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
 @NgModule({
     declarations: [
@@ -30,6 +32,8 @@ import { TokenInterceptor } from "@app/services/token.interceptor";
     imports: [
         HttpClientModule,
         OAuthModule.forRoot(),
+        BrowserAnimationsModule,
+        MatButtonModule, MatCheckboxModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,

@@ -4,3 +4,4 @@ web/bin/*
 .vs/*
 web/wwwroot/dist/*
 web/ClientApp/dist/*
+/web/.idea
