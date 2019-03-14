@@ -1,0 +1,11 @@
+<mat-card class="dashlet-cart" [ngStyle]="{'background': bgcolor , 'color':fcolor}">
+    <mat-card-header>
+        <div mat-card-avatar [ngStyle]="{'background': iconbgcolor , 'color':iconfcolor}"><mat-icon>{{icon}}</mat-icon></div>
+        <mat-card-title>{{title}}</mat-card-title>
+        <mat-card-subtitle [ngStyle]="{'background': bgcolor , 'color':fcolor}">{{substr}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-footer>
+        <button mat-raised-button color="primary">{{btnTitle}}</button>
+    </mat-card-footer>
+</mat-card>

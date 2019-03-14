@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const AotPlugin = require('@ngtools/webpack').AotPlugin;
+const AngularCompilerPlugin  = require('@ngtools/webpack').AngularCompilerPlugin ;
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -14,7 +14,8 @@ module.exports = (env) => {
         resolve: {
             extensions: ['.js', '.ts'],          
             alias: {
-                '@app': path.join(__dirname, '/ClientApp/app')
+                '@app': path.join(__dirname, '/ClientApp/app'),
+                core: path.join(__dirname, 'core')
             }
         },
         output: {
@@ -51,7 +52,7 @@ module.exports = (env) => {
         ] : [
                 // Plugins that apply in production builds only
                 new webpack.optimize.UglifyJsPlugin(),
-                new AotPlugin({
+                new AngularCompilerPlugin ({
                     tsConfigPath: './tsconfig.json',
                     entryModule: path.join(__dirname, 'ClientApp/app/app.module.browser#AppModule'),
                     exclude: ['./**/*.server.ts']
@@ -72,7 +73,7 @@ module.exports = (env) => {
             })
         ].concat(isDevBuild ? [] : [
             // Plugins that apply in production builds only
-            new AotPlugin({
+            new AngularCompilerPlugin ({
                 tsConfigPath: './tsconfig.json',
                 entryModule: path.join(__dirname, 'ClientApp/app/app.module.server#AppModule'),
                 exclude: ['./**/*.browser.ts']

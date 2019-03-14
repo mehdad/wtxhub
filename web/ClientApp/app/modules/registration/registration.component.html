@@ -1,0 +1,91 @@
+<mat-toolbar>
+    <span>Registration</span>
+</mat-toolbar>
+<div class="main-content containerX">
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-card class="registration-card" fxFlex="50" fxFlex.sm="75" fxFlex.xs="100">
+        <mat-card-content>
+            <mat-horizontal-stepper #stepper="matHorizontalStepper">
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <ng-template matStepLabel>Business Info</ng-template>
+                        <div class="containerX" >
+                            <div class="reg-form-container" >
+                            <mat-form-field>
+                                <input matInput placeholder="Company Name" formControlName="companyNameCtrl" required>
+                                <mat-icon matSuffix>business</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Address" formControlName="addressCtrl" required>
+                                <mat-icon matSuffix>location_on</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Phone" formControlName="phoneCtrl" required>
+                                <mat-icon matSuffix>call</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <textarea matInput placeholder="Description"></textarea>
+                            </mat-form-field>
+                            <div>Looking for</div>
+                            <mat-radio-group>
+                                <mat-radio-button value="0">Buy</mat-radio-button>
+                                <mat-radio-button value="1">Sell</mat-radio-button>
+                                <mat-radio-button value="2">Both</mat-radio-button>
+                            </mat-radio-group>
+
+                        </div >
+                            <mat-divider></mat-divider>
+                        </div>
+                        <div class="action-btns">
+                            <button mat-raised-button color="primary" matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
+                        <ng-template matStepLabel>Personal Info</ng-template>
+                        <div class="containerX">
+                            <div class="reg-form-container">
+                            <mat-form-field>
+                                <input matInput placeholder="First Name" formControlName="firstNameCtrl" required>
+                                <mat-icon matSuffix>person</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Last Name" formControlName="lastNameCtrl" required>
+                                <mat-icon matSuffix>person_outline</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input type="email" matInput placeholder="Email" formControlName="emailCtrl" required>
+                                <mat-icon matSuffix>email</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input type="password" matInput placeholder="Password" formControlName="passCtrl" required>
+                                <mat-icon matSuffix>keyboard</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input type="password" matInput placeholder="Conform Password"  formControlName="pass2Ctrl" required>
+                                <mat-icon matSuffix>keyboard</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Captcha" formControlName="captchaCtrl" required>
+
+                            </mat-form-field>
+
+                            <mat-slide-toggle>I accept the Terms</mat-slide-toggle>
+
+
+
+                            </div>
+                            <mat-divider></mat-divider>
+                        </div>
+                        <div class="action-btns">
+                            <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+                            <button mat-raised-button color="primary">Confirm</button>
+                        </div>
+                    </form>
+                </mat-step>
+            </mat-horizontal-stepper>
+        </mat-card-content>
+    </mat-card>
+    </div>
+</div>

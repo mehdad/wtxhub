@@ -1,59 +1,45 @@
-li .glyphicon {
-    margin-right: 10px;
+.sidenav-brand {
+    text-align: center;
+    margin: 0;
+    padding: 20px 2px;
+    color:#eba612;
+}
+
+.sidenav-link span.title{
+    color: #3c4858;
+    margin-left: 15px;
+}
+
+.sidenav-link .mat-icon{
+    color: #6e7480;
+}
+.main-side-nav-list.mat-nav-list {
+    padding-top: 0px !important;
 }
 
 /* Highlighting rules for nav menu items */
-li.link-active a,
-li.link-active a:hover,
-li.link-active a:focus {
-    background-color: #4189C7;
-    color: white;
+.main-side-nav-list a.link-active,
+.main-side-nav-list a.link-active:hover,
+.main-side-nav-list a.link-active:focus {
+    font-weight: bold;
+    background-color: #270c86;
+    color: white !important;
+    margin: 2px 15px;
+    border-radius: 2px;
+    box-shadow: 0 11px 44px rgba(0,0,0,0.30), 0 4px 6px rgba(0,0,0,0.22);
 }
 
-/* Keep the nav menu independent of scrolling and on top of other items */
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+.main-side-nav-list a.link-active *,
+.main-side-nav-list a.link-active:hover *,
+.main-side-nav-list a.link-active:focus *{
+    color: white !important;
+    padding: 0 5px !important;
 }
 
-@media (min-width: 768px) {
-    /* On small screens, convert the nav menu to a vertical sidebar */
-    .main-nav {
-        height: 100%;
-        width: calc(25% - 20px);
-    }
-    .navbar {
-        border-radius: 0px;
-        border-width: 0px;
-        height: 100%;
-    }
-    .navbar-header {
-        float: none;
-    }
-    .navbar-collapse {
-        border-top: 1px solid #444;
-        padding: 0px;
-    }
-    .navbar ul {
-        float: none;
-    }
-    .navbar li {
-        float: none;
-        font-size: 15px;
-        margin: 6px;
-    }
-    .navbar li a {
-        padding: 10px 16px;
-        border-radius: 4px;
-    }
-    .navbar a {
-        /* If a menu item's text is too long, truncate it */
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+.mat-list-item *{
+    padding: 0 15px !important;
+}
+
+.mat-divider {
+    margin-bottom: 20px;
 }

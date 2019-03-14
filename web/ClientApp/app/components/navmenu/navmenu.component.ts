@@ -8,7 +8,7 @@ import { OAuthService } from "angular-oauth2-oidc";
 })
 export class NavMenuComponent {
 
-    constructor(private oauthService: OAuthService) { }
+    constructor(private oauthService: OAuthService) {}
 
     logoutHandler() {
         this.oauthService.logOut();

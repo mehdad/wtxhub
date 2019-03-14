@@ -7,16 +7,52 @@ import { RouterModule } from '@angular/router';
 import { OAuthModule } from 'angular-oauth2-oidc';
 
 import { AppComponent } from '@app/components/app/app.component';
-import { HomeComponent } from '@app/components/home/home.component';
+import { HomeComponent } from '@app/modules/home/home.component';
 import { HttpService } from '@app/services/http.service';
 import { AuthGuard } from '@app/services/auth.guard';
 import { NavMenuComponent } from '@app/components/navmenu/navmenu.component';
-import { CounterComponent } from '@app/components/counter/counter.component';
-import { FetchDataComponent } from '@app/components/fetchdata/fetchdata.component';
+import { CounterComponent } from '@app/modules/about/about.component';
+import { FetchDataComponent } from '@app/modules/dashboard/dashboard.component';
 import { CallbackComponent } from "@app/components/Callback/callback.component";
 import { TokenInterceptor } from "@app/services/token.interceptor";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import {
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+} from '@angular/material';
+import {DashletComponent} from "@app/components/dashlet/dashlet.component";
+import {RegistrationComponent} from "@app/modules/registration/registration.component";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
     declarations: [
@@ -26,22 +62,56 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
-
+        HomeComponent,
+        DashletComponent,
+        RegistrationComponent
     ],
     imports: [
         HttpClientModule,
         OAuthModule.forRoot(),
         BrowserAnimationsModule,
-        MatButtonModule, MatCheckboxModule,
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatStepperModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        MatDividerModule,
+        MatExpansionModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatMenuModule,
+        MatNativeDateModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSliderModule,
+        MatSlideToggleModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatTooltipModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
+        FlexLayoutModule,
         RouterModule.forRoot([
             { path: '', component: CallbackComponent, pathMatch: 'full' },
             { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-            { path: 'counter', component: CounterComponent, canActivate: [AuthGuard] },
+            { path: 'about', component: CounterComponent, canActivate: [AuthGuard] },
             { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthGuard] },
+            { path: 'register', component: RegistrationComponent, canActivate: [AuthGuard] },
             { path: '**', redirectTo: '' }
         ])
     ],

@@ -3,7 +3,7 @@ import { HttpService } from "@app/services/http.service";
 
 @Component({
     selector: 'fetchdata',
-    templateUrl: './fetchdata.component.html'
+    templateUrl: './dashboard.component.html'
 })
 export class FetchDataComponent {
     public forecasts: WeatherForecast[];

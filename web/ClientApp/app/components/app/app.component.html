@@ -1,10 +1,16 @@
-<div class='container-fluid'>
-    <div class='row'>
-        <div class='col-sm-3'>
+<ng-container>
+    <mat-toolbar class="example-header">Header</mat-toolbar>
+
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav #sidenav mode="side" opened="true" >
             <nav-menu></nav-menu>
-        </div>
-        <div class='col-sm-9 body-content'>
+        </mat-sidenav>
+
+
+        <mat-sidenav-content >
             <router-outlet></router-outlet>
-        </div>
-    </div>
-</div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <mat-toolbar class="example-footer">Footer</mat-toolbar>
+</ng-container>

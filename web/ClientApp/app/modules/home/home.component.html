@@ -1,0 +1,90 @@
+<mat-toolbar>
+    <span>Dashboard</span>
+</mat-toolbar>
+<mat-toolbar>
+    <div class="button-row">
+        <button mat-raised-button color="primary" [routerLink]="['/register']">Complete profile</button>
+    </div>
+</mat-toolbar>
+<div class="main-content">
+
+    <div class="containerX">
+        <div  class="colored box"
+             style="cursor: pointer;">
+            <div fxFlex="25">
+                <dashlet-cart
+                        title="Users"
+                        icon="people"
+                        substr="250 users"
+                        btnTitle="more"
+                        bgcolor = "#00BCD4"
+                        fcolor = "white"
+                ></dashlet-cart>
+            </div>
+            <div fxFlex="25">
+                <dashlet-cart
+                        title="Balance"
+                        icon="attach_money"
+                        substr="9500 WTX"
+                        btnTitle="History"
+                        bgcolor="#cddc39"
+                        fcolor = "#4caf50"
+                ></dashlet-cart>
+            </div>
+
+            <div fxFlex>
+                <dashlet-cart
+                        title="Balance"
+                        icon="attach_money"
+                        substr="650 WTX"
+                        btnTitle="History"
+                        bgcolor="#ff5722"
+                        fcolor = "white"
+                ></dashlet-cart>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="containerX">
+        <div class="colored box"
+             style="cursor: pointer;">
+            <div fxFlex="50">
+                <dashlet-cart
+                        title="Balance"
+                        icon="attach_money"
+                        substr="650 WTX"
+                        btnTitle="History"
+                        bgcolor="#f44336"
+                        fcolor = "white"
+                ></dashlet-cart>
+            </div>
+            <div fxFlex="25">
+                <dashlet-cart
+                        title="Balance"
+                        icon="attach_money"
+                        substr="650 WTX"
+                        btnTitle="History"
+                        bgcolor="#ffc107"
+                        fcolor = "white"
+                ></dashlet-cart>
+            </div>
+
+            <div fxFlex>
+                <dashlet-cart
+                        title="Balance"
+                        icon="attach_money"
+                        substr="650 WTX"
+                        btnTitle="History"
+                        bgcolor="#009688"
+                        fcolor = "white"
+                ></dashlet-cart>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>

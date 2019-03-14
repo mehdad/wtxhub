@@ -1,0 +1,20 @@
+.reg-form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-form-container > * {
+    width: 100%;
+}
+
+.registration-card {
+    padding: 10px 0 !important;
+}
+
+.action-btns {
+    text-align: right;
+}
+
+.action-btns button{
+    margin-top: 10px;
+}

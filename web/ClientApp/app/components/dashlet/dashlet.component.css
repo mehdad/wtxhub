@@ -1,0 +1,20 @@
+.dashlet-cart {
+    margin: 8px 10px;
+}
+
+.dashlet-cart .dashlet-cart-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+mat-card-footer{
+    text-align: right;
+}
+
+.mat-card-avatar {
+    text-align: center;
+}
+
+.mat-card-avatar mat-icon {
+    line-height: unset;
+}
